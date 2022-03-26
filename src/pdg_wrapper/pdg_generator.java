@@ -28,7 +28,6 @@ public class pdg_generator {
 
         try {
             String content = (new Scanner(selectedFile)).useDelimiter("\\Z").next();
-            //System.out.println("Hello World");
             consoleText.setText(content);
         } catch (FileNotFoundException |  NullPointerException var6) {
             var6.printStackTrace();
