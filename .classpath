@@ -6,5 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/seher/Desktop/EclipseJava/SENG541As5/comp_pdg.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

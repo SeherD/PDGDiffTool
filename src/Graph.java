@@ -139,8 +139,10 @@ public class Graph {
 	    
 	    
 		public static void main(String[] args) throws FileNotFoundException {
+			String filename = "nestedCycleTest";
+			PDG_Generator.getDotFile(".\\input\\"+ filename+".java");
 			Graph graph = new Graph();
-			File graphFile = new File(".\\graphFiles\\trial");
+			File graphFile = new File(".\\graphFiles\\"+ filename);
 			graph=graph.createGraph(graphFile);
 			System.out.println(graph.breadthFirstTraversal(graph, "Line_0").toString());
 
