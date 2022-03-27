@@ -30,8 +30,17 @@ public class Vertex {
 	
 	
 		String label;
-	    Vertex (String label) {
+		String sourceCode;
+	    
+	    public String getSourceCode() {
+			return sourceCode;
+		}
+		public void setSourceCode(String sourceCode) {
+			this.sourceCode = sourceCode;
+		}
+		Vertex (String label) {
 	        this.label = label;
+	        
 	    }
 
 	  

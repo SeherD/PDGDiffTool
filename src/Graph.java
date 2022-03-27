@@ -4,25 +4,40 @@ import java.util.*;
 
 public class Graph {
 	 private Map<Vertex, List<Vertex>> adjVertices;
+	 private List<Vertex> vertices;
 	    
 	    public Graph() {
 		
 		this.adjVertices = new HashMap<Vertex, List<Vertex>>();
+		this.vertices= new ArrayList<>();
 	}
 
-		void addVertex(String label) {
-	        adjVertices.putIfAbsent(new Vertex(label), new ArrayList<>());
+		void addVertex(String label, String sourceCode) {
+			Vertex v = new Vertex(label);
+			v.setSourceCode(sourceCode);
+	        adjVertices.putIfAbsent(v, new ArrayList<>());
+	        if(!vertices.contains(v)) {
+	        	vertices.add(v);
+	        }
+	        
+	        
 	    }
 
 	    void removeVertex(String label) {
-	        Vertex v = new Vertex(label);
+	    	Vertex v = new Vertex(label);
 	        adjVertices.values().stream().forEach(e -> e.remove(v));
 	        adjVertices.remove(new Vertex(label));
+	        vertices.remove(v);
 	    }
 	    void addEdge(String label1, String label2) {
 	        Vertex v1 = new Vertex(label1);
 	        Vertex v2 = new Vertex(label2);
-	        adjVertices.get(v1).add(v2);
+	        if(vertices.contains(v1)&& vertices.contains(v2)) {
+	        	Vertex node1=vertices.get(vertices.indexOf(v1));
+	        	Vertex node2=vertices.get(vertices.indexOf(v2));
+	        	adjVertices.get(node1).add(node2);
+	        }
+	       
 	        
 	    }
 	    void removeEdge(String label1, String label2) {
@@ -32,6 +47,7 @@ public class Graph {
 	        
 	        if (eV1 != null)
 	            eV1.remove(v2);
+	        
 	        
 	    }
 	    
@@ -67,6 +83,7 @@ public class Graph {
 	                if (!visited.contains(v.label)) {
 	                    visited.add(v.label);
 	                    queue.add(v.label);
+	                    System.out.println("Label " + v.label+" SourceCode "+v.sourceCode);
 	                }
 	            }
 	        }
@@ -81,6 +98,7 @@ public class Graph {
 	    	    if(scanner.hasNext()) {
 	    	    	scanner.nextLine();
 	    	    }
+	    	    int counter=0;
 	    	    while(scanner.hasNext()){
 	    	    	String line =scanner.nextLine();
 	    	    	if(line.length()<=12)
@@ -88,7 +106,8 @@ public class Graph {
 	    	    		String tokens[] = line.split(";");
 	    	    		if(!tokens[0].equalsIgnoreCase("}"))
 	    	    		{
-	    	    			graph.addVertex(tokens[0].replaceAll(" ", ""));
+	    	    			graph.addVertex(tokens[0].replaceAll(" ", ""), counter+"");
+	    	    			counter++;
 	    	    			System.out.println(tokens[0].replaceAll(" ", ""));
 	    	    		}
 	    	    		
