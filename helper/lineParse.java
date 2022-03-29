@@ -7,7 +7,7 @@ public class lineParse {
 		BufferedReader reader;
 		try {
 			reader = new BufferedReader(new FileReader(
-					"/Users/lucasjohannson/lighthouse/SENG541/PDGDiffTool/input/ifTest.java"));
+					"../input/ifTest.java"));
 			String line = reader.readLine();
 
       //create dictionary to store line data 
