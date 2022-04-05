@@ -47,7 +47,7 @@ public class Node {
 	public  boolean equals(Object obj) {
 		if(getClass() == obj.getClass()) {
 			Node other = (Node) obj;
-			return id.equals(other.getId());
+			return sourceCode.equals(other.getSourceCode());
 		}
 		return false;
 	}

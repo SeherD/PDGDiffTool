@@ -4,9 +4,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Scanner;
+import helper.lineParse;
 
 import graphImplementation.PDG_Generator;
 
@@ -92,7 +94,7 @@ public class Graph {
 		return sourceCode;
 	}
 
-	Graph createGraph(File graphFile) throws FileNotFoundException {
+	Graph createGraph(File graphFile, Hashtable<Integer, String> sourceCode) throws FileNotFoundException {
 		Graph graph = new Graph();
 
 		Scanner scanner = new Scanner(graphFile);
@@ -106,7 +108,7 @@ public class Graph {
 			if (line.length() <= 12) {
 				String tokens[] = line.split(";");
 				if (!tokens[0].equalsIgnoreCase("}")) {
-					Node node = new Node(tokens[0].replaceAll(" ", ""), counter + "");
+					Node node = new Node(tokens[0].replaceAll(" ", ""), sourceCode.get(counter));
 
 					graph.addNode(node);
 					counter++;
@@ -138,10 +140,12 @@ public class Graph {
 
 	public Graph generateGraph(String file) throws FileNotFoundException {
 		String filename = file;
+		lineParse p = new lineParse();
 		PDG_Generator.getDotFile(".\\input\\" + filename + ".java");
 		Graph graph = new Graph();
 		File graphFile = new File(".\\graphFiles\\" + filename);
-		graph = graph.createGraph(graphFile);
+		Hashtable<Integer, String> sourceCode= p.getLineContent(filename);
+		graph = graph.createGraph(graphFile,sourceCode);
 		return graph;
 
 	}

@@ -29,24 +29,24 @@ public class App {
 		boolean running = true;
 		while(running) {
 			System.out.println("\n------");
-			String[] texts = getInputTexts(args);
-			getDistance(texts, posEditWeights, deprelEditWeights);
+			String[] files = getInputTexts(args);
+			getDistance(files, posEditWeights, deprelEditWeights);
 			running = shouldContinue();
 		}
 		System.out.println("Exiting..");
 	}
 	
-	public static void getDistance(String[] texts, Map<String,Double> posEditWeights, Map<String,Double> deprelEditWeights) throws FileNotFoundException  {
+	public static void getDistance(String[] files, Map<String,Double> posEditWeights, Map<String,Double> deprelEditWeights) throws FileNotFoundException  {
 		Graph g1 = new Graph();
-		g1=g1.generateGraph("ifTest");
+		g1=g1.generateGraph(files[0]);
 		Graph g2 = new Graph();
-		g2=g2.generateGraph("ifTest1");
+		g2=g2.generateGraph(files[1]);
 
 		GraphEditDistance ged = new GraphEditDistance(g1, g2, posEditWeights, deprelEditWeights);
-
+		ged.printMatrix();
 		System.out.println("Calculating graph edit distance for the two sentences:");
-		System.out.println(texts[0]);
-		System.out.println(texts[1]);
+		System.out.println(files[0]);
+		System.out.println(files[1]);
 		System.out.println("Distance between the two sentences: "+ged.getDistance()+". Normalised: "+ged.getNormalizedDistance());
 		System.out.println("Edit path:");
 		for(String editPath : getEditPath(g1, g2, ged.getCostMatrix(), true)) {
@@ -60,10 +60,10 @@ public class App {
 			InputStreamReader converter = new InputStreamReader(System.in);
 			BufferedReader in = new BufferedReader(converter);
 			try {
-				System.out.println("Please enter the first sentence: ");
+				System.out.println("Please enter the first file: ");
 				text1 = in.readLine();
 
-				System.out.println("Please enter the second sentence: ");
+				System.out.println("Please enter the second file: ");
 				text2 = in.readLine();
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -108,7 +108,7 @@ public class App {
 	private static String getEditPathAttribute(int nodeNumber, Graph g) {
 		if(nodeNumber < g.getNodes().size()) {
 			Node n= g.getNode(nodeNumber);
-			return n.getSourceCode();
+			return n.getId()+n.getSourceCode();
 		}else {
 			return "ε";
 		}
