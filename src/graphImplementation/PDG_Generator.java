@@ -1,4 +1,4 @@
-
+package graphImplementation;
 import com.github.javaparser.ParseException;
 import graphStructures.GraphNode;
 import graphStructures.RelationshipEdge;
