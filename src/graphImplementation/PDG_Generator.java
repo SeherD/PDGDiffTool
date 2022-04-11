@@ -99,18 +99,24 @@ public class PDG_Generator {
 		String prevLine = "";
 		try {
 			File file = new File("./input/dictionaryData.txt"); 
+			
+			//Code segments are checked for to compute their semantic types
 			System.out.println("\n\nAST Printer starts \n\n");
 			getAST(new FileInputStream(selectedFile));
 			
+			//Dictionary (Hashmap called semanticTypesMap is created where code segments are keys and semantic types are values
 			System.out.println("\n\n\n Dictionary function Start \n\n\n");
 			
 			try (BufferedReader br = new BufferedReader(new InputStreamReader(
+				//Raw code segments and their semantic types are stored in a file
 	            new FileInputStream("./input/dictionaryData.txt"), StandardCharsets.UTF_8));) {
 
 	            String line;
 	            
+	            //Data is stored in ASTPrinter class under as astPrint method 
 	            while ((line = br.readLine()) != null) {
 	                
+	            	//Lines are parsed to differentiate between code segments and semantic types (stored in hashmap thereafter)
 	                System.out.println(line);
 	                if(line.contains("----------------------------------------") && !line.isEmpty()) {
 	                	continue;
@@ -126,9 +132,13 @@ public class PDG_Generator {
 	                }
 	            }
 	            
+	            //Set local hashmap copy to object accessible one 
 	            setSemanticTypesMap(map);
+	            
+	            //Raw data containing file is deleted
 	            file.delete();
 	            
+	            //Dictionary key and values are printed for debugging purposes
 	            System.out.println("\n\n Dictionary keys and values start\n");
 	            for (String i : getSemanticTypesMap().keySet()) {
 	            	  System.out.println(i);
@@ -147,9 +157,11 @@ public class PDG_Generator {
 				e.printStackTrace();
 			}
 			
+			//Dictionary population ends
 			System.out.println("\n\n\n Dictionary function End \n\n\n");
 			
 			System.out.println("\nAST Printer ends\n\n");
+			
 			astPrinter.addFile(new FileInputStream(selectedFile),
 					(DirectedGraph<GraphNode, RelationshipEdge>) hrefGraph, gn, consoleText);
 			
@@ -167,11 +179,16 @@ public class PDG_Generator {
 }
 
 class ASTPrinter {
+	
+	//File to be created is initialized at given path
 	File file = new File("./input/dictionaryData.txt");
 	 void astPrint(Node child2){
-	    FileOutputStream out = null;
+	    
+		//File writer and string s to use to write are declared and initialized 
+		FileOutputStream out = null;
 	    String s = "";
-		if(relevant(child2)) {
+		
+	    if(relevant(child2)) {
 			if(child2.getClass().equals(com.github.javaparser.ast.body.MethodDeclaration.class)){
 				printMethodModifiers(child2);
 				MethodType(child2);
@@ -184,24 +201,17 @@ class ASTPrinter {
 			}    		
 			
 			else{
+				//If raw data containing file already exists
 				if(file.exists()) {
 						try {
+							//write to this file
 							out = new FileOutputStream("./input/dictionaryData.txt", true);
 							
+							//code segment and semantic types seperator in raw data
 							System.out.println(file.getAbsolutePath());
 							System.out.println("------------------------------------------------------------");
 							s = "------------------------------------------------------------";
-							try {
-								out.write(s.getBytes());
-								out.write("\n".getBytes());
-								out.flush();
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-							System.out.println(child2.getClass());
-							s = String.valueOf(child2.getClass());
-							//s = s.replaceAll("\n", "");
+							//Write this to file
 							try {
 								out.write(s.getBytes());
 								out.write("\n".getBytes());
@@ -211,9 +221,11 @@ class ASTPrinter {
 								e.printStackTrace();
 							}
 							
-							System.out.println(child2.toString());
-							s = String.valueOf(child2.toString());
-							s = s.replaceAll("\n", "");
+							//Semantic type of a code segment 
+							System.out.println(child2.getClass());
+							s = String.valueOf(child2.getClass());
+							
+							//Write this to file
 							try {
 								out.write(s.getBytes());
 								out.write("\n".getBytes());
@@ -222,6 +234,22 @@ class ASTPrinter {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
+							
+							//Code segment without newlines so that dictionary keys are populated correctly
+							System.out.println(child2.toString());
+							s = String.valueOf(child2.toString());
+							s = s.replaceAll("\n", "");
+							
+							//Write this to file
+							try {
+								out.write(s.getBytes());
+								out.write("\n".getBytes());
+								out.flush();
+							} catch (IOException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+							
 						} catch (FileNotFoundException e) {
 							// TODO Auto-generated catch block
 							e.printStackTrace();
@@ -229,10 +257,13 @@ class ASTPrinter {
 						
 					
 				} else {
+					// Same as other case except we create the file here 
 					try {
 						out = new FileOutputStream("./input/dictionaryData.txt", true);
 						
+						//Create file if file does not exist 
 						file.createNewFile();
+						
 						System.out.println(file.getAbsolutePath());
 						System.out.println("------------------------------------------------------------");
 						s = "------------------------------------------------------------";
@@ -258,6 +289,7 @@ class ASTPrinter {
 						
 						System.out.println(child2.toString());
 						s = String.valueOf(child2.toString());
+						s = s.replaceAll("\n", "");
 						try {
 							out.write(s.getBytes());
 							out.write("\n".getBytes());
@@ -291,7 +323,7 @@ class ASTPrinter {
 		//getLineSemanticTypeDictionary(file);
 		
 		
-		
+		//Continue with the other print documentation
 		child2.getChildrenNodes().forEach(this::astPrint);
 	}
 	 
@@ -412,3 +444,4 @@ class ASTPrinter {
 		}
 }
 }
+
