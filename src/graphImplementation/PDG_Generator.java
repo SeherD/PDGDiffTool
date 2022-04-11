@@ -356,92 +356,93 @@ class ASTPrinter {
 	
 	private static void MethodType(Node child2){
 		if(child2.getClass().equals(com.github.javaparser.ast.body.MethodDeclaration.class)) {
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Method.Type\n"+((MethodDeclaration)child2).getType().toString()+"\n");
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Method.Type\n"+((MethodDeclaration)child2).getType().toString()+"\n");
 		}
 	}
 	
 	private static void MethodName(Node child2){
 		if(child2.getClass().equals(com.github.javaparser.ast.body.MethodDeclaration.class)) {
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Method.Name\n"+((MethodDeclaration)child2).getNameExpr()+"\n");
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Method.Name\n"+((MethodDeclaration)child2).getNameExpr()+"\n");
 		}
 	}
 		
 	private static void ClassName(Node child2){ 
 		if(child2.getClass().equals(com.github.javaparser.ast.body.ClassOrInterfaceDeclaration.class)) {
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Class.Name\n"+((ClassOrInterfaceDeclaration)child2).getNameExpr()+"\n");
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Class.Name\n"+((ClassOrInterfaceDeclaration)child2).getNameExpr()+"\n");
 		}
 	}
 	
 	private static void ClassExtension(Node child2){ 
 		if(child2.getClass().equals(com.github.javaparser.ast.body.ClassOrInterfaceDeclaration.class)) {
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Class.ExtensionOf\n"+((ClassOrInterfaceDeclaration)child2).getExtends().toString()+"\n");
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Class.ExtensionOf\n"+((ClassOrInterfaceDeclaration)child2).getExtends().toString()+"\n");
 		}
 	}
 		
 	private static void printMethodModifiers(Node child2) {
 			if(ModifierSet.isPrivate(((MethodDeclaration) child2).getModifiers())){
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Method.Modifier\nprivate\n");
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Method.Modifier\nprivate\n");
 			}
 			if(ModifierSet.isPublic(((MethodDeclaration) child2).getModifiers())){
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Method.Modifier\npublic\n");
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Method.Modifier\npublic\n");
 			}
 			if(ModifierSet.isStatic(((MethodDeclaration) child2).getModifiers())){
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Method.Modifier\nstatic\n");    			
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Method.Modifier\nstatic\n");    			
 			}
 			if(ModifierSet.isStrictfp(((MethodDeclaration) child2).getModifiers())){
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Method.Modifier\nstrictfp\n");
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Method.Modifier\nstrictfp\n");
 			}
 			if(ModifierSet.isSynchronized(((MethodDeclaration) child2).getModifiers())){
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Method.Modifier\nsyncronized\n");
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Method.Modifier\nsyncronized\n");
 			}
 			if(ModifierSet.isTransient(((MethodDeclaration) child2).getModifiers())){
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Method.Modifier\ntransient\n");
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Method.Modifier\ntransient\n");
 			}
 			if(ModifierSet.isVolatile(((MethodDeclaration) child2).getModifiers())){
-				//System.out.println("------------------------------------------------------------");
-				//System.out.print("Method.Modifier\nvolatile\n");
+				System.out.println("------------------------------------------------------------");
+				System.out.print("Method.Modifier\nvolatile\n");
 			}
 	}	
 	
 	private static void printClassIntModifiers(Node child2) {
 		if(ModifierSet.isPrivate(((ClassOrInterfaceDeclaration) child2).getModifiers())){
-			//System.out.println("------------------------------------------------------------");
-			//System.out.print("ClassOrInterface.Modifier\nprivate\n");
+			System.out.println("------------------------------------------------------------");
+			System.out.print("ClassOrInterface.Modifier\nprivate\n");
 		}
 		if(ModifierSet.isPublic(((ClassOrInterfaceDeclaration) child2).getModifiers())){
-			//System.out.println("------------------------------------------------------------");
-			//System.out.print("ClassOrInterface.Modifier\npublic\n");
+			System.out.println("------------------------------------------------------------");
+			System.out.print("ClassOrInterface.Modifier\npublic\n");
 		}
 		if(ModifierSet.isStatic(((ClassOrInterfaceDeclaration) child2).getModifiers())){
-			//System.out.println("------------------------------------------------------------");
-			//System.out.print("ClassOrInterface.Modifier\nstatic\n");    			
+			System.out.println("------------------------------------------------------------");
+			System.out.print("ClassOrInterface.Modifier\nstatic\n");    			
 		}
 		if(ModifierSet.isStrictfp(((ClassOrInterfaceDeclaration) child2).getModifiers())){
-			//System.out.println("------------------------------------------------------------");
-			//System.out.print("ClassOrInterface.Modifier\nstrictfp\n");
+			System.out.println("------------------------------------------------------------");
+			System.out.print("ClassOrInterface.Modifier\nstrictfp\n");
 		}
 		if(ModifierSet.isSynchronized(((ClassOrInterfaceDeclaration) child2).getModifiers())){
-			//System.out.println("------------------------------------------------------------");
-			//System.out.print("ClassOrInterface.Modifier\nsyncronized\n");
+			System.out.println("------------------------------------------------------------");
+			System.out.print("ClassOrInterface.Modifier\nsyncronized\n");
 		}
 		if(ModifierSet.isTransient(((ClassOrInterfaceDeclaration) child2).getModifiers())){
-			//System.out.println("------------------------------------------------------------");
-			//System.out.print("ClassOrInterface.Modifier\ntransient\n");
+			System.out.println("------------------------------------------------------------");
+			System.out.print("ClassOrInterface.Modifier\ntransient\n");
 		}
 		if(ModifierSet.isVolatile(((ClassOrInterfaceDeclaration) child2).getModifiers())){
-			//System.out.println("------------------------------------------------------------");
-			//System.out.print("ClassOrInterface.Modifier\nvolatile\n");
+			System.out.println("------------------------------------------------------------");
+			System.out.print("ClassOrInterface.Modifier\nvolatile\n");
 		}
 }
 }
+
 
