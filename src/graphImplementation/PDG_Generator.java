@@ -277,6 +277,7 @@ class ASTPrinter {
 						}
 						System.out.println(child2.getClass());
 						s = String.valueOf(child2.getClass());
+						s = s.replaceAll("\n", "");
 						try {
 							out.write(s.getBytes());
 							out.write("\n".getBytes());
@@ -444,5 +445,3 @@ class ASTPrinter {
 		}
 }
 }
-
-
