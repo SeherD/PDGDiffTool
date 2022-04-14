@@ -8,12 +8,8 @@ In this project, we are developing a software application that can compute the m
 2. Java 13 SDK
 
 ## Team Member
-Haotian Chen
-
-Seher Dawar
-
-Lucas Johannson
-
-Prit Patel
-
-Xiang Yu Shi
+1. Haotian Chen
+2. Seher Dawar
+3. Lucas Johannson
+4. Prit Patel
+5. Xiang Yu Shi
