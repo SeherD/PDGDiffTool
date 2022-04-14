@@ -121,10 +121,20 @@ public class PDG_Generator {
 	                if(line.contains("----------------------------------------") && !line.isEmpty()) {
 	                	continue;
 	                }
-	                else if(line.contains("class") && !line.isEmpty()){
+	                else if((line.contains("class")) && !line.isEmpty()){
 	                	System.out.println(line);
 	                	String[] classSplit = line.split("\\.",6);
-	                	prevLine = classSplit[5];
+	                	prevLine = classSplit[classSplit.length-1];
+	                }	                
+	                else if (line.contains("class") || 
+	                		line.contains("Class.Name") || 
+	                		line.contains("Class.ExtensionOf") || 
+	                		line.contains("Method.Type") || 
+	                		line.contains("Method.Name") ||
+	                		line.contains("Method.Modifier") ||
+	                		line.contains("ClassOrInterface.Modifier")){
+	                	System.out.println(line);
+	                	prevLine = line;
 	                }
 	                else if(!line.isEmpty()) {
 	                	map.put(line, prevLine);
@@ -180,8 +190,7 @@ public class PDG_Generator {
 
 class ASTPrinter {
 	
-	//File to be created is initialized at given path
-	File file = new File("./input/dictionaryData.txt");
+	static File file = new File("./input/dictionaryData.txt");
 	 void astPrint(Node child2){
 	    
 		//File writer and string s to use to write are declared and initialized 
@@ -203,107 +212,62 @@ class ASTPrinter {
 			else{
 				//If raw data containing file already exists
 				if(file.exists()) {
-						try {
-							//write to this file
-							out = new FileOutputStream("./input/dictionaryData.txt", true);
-							
-							//code segment and semantic types seperator in raw data
-							System.out.println(file.getAbsolutePath());
-							System.out.println("------------------------------------------------------------");
-							s = "------------------------------------------------------------";
-							//Write this to file
-							try {
-								out.write(s.getBytes());
-								out.write("\n".getBytes());
-								out.flush();
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-							
-							//Semantic type of a code segment 
-							System.out.println(child2.getClass());
-							s = String.valueOf(child2.getClass());
-							
-							//Write this to file
-							try {
-								out.write(s.getBytes());
-								out.write("\n".getBytes());
-								out.flush();
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-							
-							//Code segment without newlines so that dictionary keys are populated correctly
-							System.out.println(child2.toString());
-							s = String.valueOf(child2.toString());
-							s = s.replaceAll("\n", "");
-							
-							//Write this to file
-							try {
-								out.write(s.getBytes());
-								out.write("\n".getBytes());
-								out.flush();
-							} catch (IOException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
-							}
-							
-						} catch (FileNotFoundException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						
-					
-				} else {
-					// Same as other case except we create the file here 
 					try {
-						out = new FileOutputStream("./input/dictionaryData.txt", true);
-						
-						//Create file if file does not exist 
 						file.createNewFile();
-						
-						System.out.println(file.getAbsolutePath());
-						System.out.println("------------------------------------------------------------");
-						s = "------------------------------------------------------------";
-						try {
-							out.write(s.getBytes());
-							out.write("\n".getBytes());
-							out.flush();
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						System.out.println(child2.getClass());
-						s = String.valueOf(child2.getClass());
-						s = s.replaceAll("\n", "");
-						try {
-							out.write(s.getBytes());
-							out.write("\n".getBytes());
-							out.flush();
-
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						
-						System.out.println(child2.toString());
-						s = String.valueOf(child2.toString());
-						s = s.replaceAll("\n", "");
-						try {
-							out.write(s.getBytes());
-							out.write("\n".getBytes());
-							out.flush();
-
-						} catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
+						e.printStackTrace();
 					}
+				}
+				
+				try {
+					out = new FileOutputStream("./input/dictionaryData.txt", true);
+					
+					//code segment and semantic types seperator in raw data
+					System.out.println(file.getAbsolutePath());
+					System.out.println("------------------------------------------------------------");
+					s = "------------------------------------------------------------";
+					//Write this to file
+					try {
+						out.write(s.getBytes());
+						out.write("\n".getBytes());
+						out.flush();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					//Semantic type of a code segment 
+					System.out.println(child2.getClass());
+					s = String.valueOf(child2.getClass());
+					
+					//Write this to file
+					try {
+						out.write(s.getBytes());
+						out.write("\n".getBytes());
+						out.flush();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					
+					//Code segment without newlines so that dictionary keys are populated correctly
+					System.out.println(child2.toString());
+					s = String.valueOf(child2.toString());
+					s = s.replaceAll("\n", "");
+					
+					//Write this to file
+					try {
+						out.write(s.getBytes());
+						out.write("\n".getBytes());
+						out.flush();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
 				
 			}
@@ -326,6 +290,57 @@ class ASTPrinter {
 		
 		//Continue with the other print documentation
 		child2.getChildrenNodes().forEach(this::astPrint);
+	}
+	 
+	//Method for all print and writing to dictionary data txt file purposes
+	public static void printAndWriteToDictionaryData(boolean conditional, String semanticType) {
+		String s = "";
+		FileOutputStream out = null;
+		
+		if(conditional) {
+			
+			if(file.exists()) {
+				try {
+					file.createNewFile();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+			try {
+				out = new FileOutputStream("./input/dictionaryData.txt", true);
+				
+				//code segment and semantic types seperator in raw data
+				System.out.println(file.getAbsolutePath());
+				System.out.println("------------------------------------------------------------");
+				s = "------------------------------------------------------------";
+				//Write this to file
+				try {
+					out.write(s.getBytes());
+					out.write("\n".getBytes());
+					out.flush();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				System.out.print(semanticType);
+				s = semanticType;
+				//Write this to file
+				try {
+					out.write(s.getBytes());
+					out.write("\n".getBytes());
+					out.flush();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			} catch (FileNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}	
+		}
 	}
 	 
 	public void getLineSemanticTypeDictionary(String filePath) {
@@ -356,63 +371,41 @@ class ASTPrinter {
 	}
 	
 	private static void MethodType(Node child2){
-		if(child2.getClass().equals(com.github.javaparser.ast.body.MethodDeclaration.class)) {
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Method.Type\n"+((MethodDeclaration)child2).getType().toString()+"\n");
-		}
+		printAndWriteToDictionaryData(child2.getClass().equals(com.github.javaparser.ast.body.MethodDeclaration.class), "Method.Type\n"+((MethodDeclaration)child2).getType().toString());
 	}
 	
-	private static void MethodName(Node child2){
-		if(child2.getClass().equals(com.github.javaparser.ast.body.MethodDeclaration.class)) {
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Method.Name\n"+((MethodDeclaration)child2).getNameExpr()+"\n");
-		}
+	private static void MethodName(Node child2){		
+		printAndWriteToDictionaryData(child2.getClass().equals(com.github.javaparser.ast.body.MethodDeclaration.class), "Method.Name\n"+((MethodDeclaration)child2).getNameExpr());		
 	}
 		
-	private static void ClassName(Node child2){ 
-		if(child2.getClass().equals(com.github.javaparser.ast.body.ClassOrInterfaceDeclaration.class)) {
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Class.Name\n"+((ClassOrInterfaceDeclaration)child2).getNameExpr()+"\n");
-		}
+	private static void ClassName(Node child2){ 	
+		printAndWriteToDictionaryData(child2.getClass().equals(com.github.javaparser.ast.body.ClassOrInterfaceDeclaration.class), "Class.Name\n"+((ClassOrInterfaceDeclaration)child2).getNameExpr());
 	}
 	
 	private static void ClassExtension(Node child2){ 
-		if(child2.getClass().equals(com.github.javaparser.ast.body.ClassOrInterfaceDeclaration.class)) {
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Class.ExtensionOf\n"+((ClassOrInterfaceDeclaration)child2).getExtends().toString()+"\n");
-		}
+		printAndWriteToDictionaryData(child2.getClass().equals(com.github.javaparser.ast.body.ClassOrInterfaceDeclaration.class), "Class.ExtensionOf\n"+((ClassOrInterfaceDeclaration)child2).getExtends().toString());
 	}
 		
 	private static void printMethodModifiers(Node child2) {
-			if(ModifierSet.isPrivate(((MethodDeclaration) child2).getModifiers())){
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Method.Modifier\nprivate\n");
-			}
-			if(ModifierSet.isPublic(((MethodDeclaration) child2).getModifiers())){
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Method.Modifier\npublic\n");
-			}
-			if(ModifierSet.isStatic(((MethodDeclaration) child2).getModifiers())){
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Method.Modifier\nstatic\n");    			
-			}
-			if(ModifierSet.isStrictfp(((MethodDeclaration) child2).getModifiers())){
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Method.Modifier\nstrictfp\n");
-			}
-			if(ModifierSet.isSynchronized(((MethodDeclaration) child2).getModifiers())){
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Method.Modifier\nsyncronized\n");
-			}
-			if(ModifierSet.isTransient(((MethodDeclaration) child2).getModifiers())){
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Method.Modifier\ntransient\n");
-			}
-			if(ModifierSet.isVolatile(((MethodDeclaration) child2).getModifiers())){
-				System.out.println("------------------------------------------------------------");
-				System.out.print("Method.Modifier\nvolatile\n");
-			}
+		printAndWriteToDictionaryData(ModifierSet.isPrivate(((MethodDeclaration) child2).getModifiers()),"Method.Modifier\nprivate");
+		printAndWriteToDictionaryData(ModifierSet.isPublic(((MethodDeclaration) child2).getModifiers()),"Method.Modifier\npublic");
+		printAndWriteToDictionaryData(ModifierSet.isStatic(((MethodDeclaration) child2).getModifiers()),"Method.Modifier\nstatic");
+		printAndWriteToDictionaryData(ModifierSet.isStrictfp(((MethodDeclaration) child2).getModifiers()),"Method.Modifier\nstrictfp");
+		printAndWriteToDictionaryData(ModifierSet.isSynchronized(((MethodDeclaration) child2).getModifiers()),"Method.Modifier\nsyncronized");
+		printAndWriteToDictionaryData(ModifierSet.isTransient(((MethodDeclaration) child2).getModifiers()),"Method.Modifier\ntransient");
+		printAndWriteToDictionaryData(ModifierSet.isVolatile(((MethodDeclaration) child2).getModifiers()),"Method.Modifier\nvolatile");
 	}	
+	
+	private static void printClassIntModifiers(Node child2) {
+		printAndWriteToDictionaryData(ModifierSet.isPrivate(((ClassOrInterfaceDeclaration) child2).getModifiers()),"ClassOrInterface.Modifier\nprivate");
+		printAndWriteToDictionaryData(ModifierSet.isPublic(((ClassOrInterfaceDeclaration) child2).getModifiers()),"ClassOrInterface.Modifier\npublic");
+		printAndWriteToDictionaryData(ModifierSet.isStatic(((ClassOrInterfaceDeclaration) child2).getModifiers()),"ClassOrInterface.Modifier\nstatic");
+		printAndWriteToDictionaryData(ModifierSet.isStrictfp(((ClassOrInterfaceDeclaration) child2).getModifiers()),"ClassOrInterface.Modifier\nstrictfp");
+		printAndWriteToDictionaryData(ModifierSet.isSynchronized(((ClassOrInterfaceDeclaration) child2).getModifiers()),"ClassOrInterface.Modifier\nsyncronized");
+		printAndWriteToDictionaryData(ModifierSet.isTransient(((ClassOrInterfaceDeclaration) child2).getModifiers()),"ClassOrInterface.Modifier\ntransient");
+		printAndWriteToDictionaryData(ModifierSet.isVolatile(((ClassOrInterfaceDeclaration) child2).getModifiers()),"ClassOrInterface.Modifier\nvolatile");
+}
+}
 	
 	private static void printClassIntModifiers(Node child2) {
 		if(ModifierSet.isPrivate(((ClassOrInterfaceDeclaration) child2).getModifiers())){
