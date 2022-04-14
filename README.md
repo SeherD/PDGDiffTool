@@ -14,7 +14,7 @@ There are five test files created to test. Test1 and test2 are identical to each
 
 ## Output
 The output of the project is piped to text files with the name format “file1 + file2 + output.txt”.
-The Normalized Graph Edit Distance (GED) is used to classify the files into Semantically Identical, Semantically Similar and Semantically Different. If the Normalized GED is 0 then the files are identical, if it's between 0 and 1, then the files are similar and if it's greater than 1 then they are different.
+The Normalized Graph Edit Distance (GED) is used to classify the files into Semantically Identical, Semantically Similar and Semantically Different. If the Normalized GED is 0 then the files are identical, if it's between 0 and 1, then the files are similar and if it's greater than 1 then they are different. If the Normalized GED is between 0 and 0.5 then the changes are minor and if the GED is between 0.5 and 1then the changes are major. 
 The output for Semantically Similar files can be interpreted using the following guidelines :
 1. If the output is ε -> Node, then a node was added to the graph, which means the code represented by the node was inserted into the graph.
 2. If the output is Node ->ε, then a node was deleted from the graph, which means the code represented by the node was deleted from the graph.
