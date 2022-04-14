@@ -30,6 +30,3 @@ The output for Semantically Similar files can be interpreted using the following
 5. Xiang Yu Shi
 
 
-## Screen Shots
-
-!["PDG tool"](https://github.com/SeherD/PDGDiffTool/blob/main/src/resources/Screen%20Shot%202022-04-14%20at%201.21.16%20PM.png?raw=true)
