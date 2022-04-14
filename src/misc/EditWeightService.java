@@ -25,12 +25,12 @@ public class EditWeightService {
 	
 	private static Map<String, Double> getSubCosts(String filename, Map<String, Double> editCostWeights) throws IOException {
 		List<String> lines = Files.readAllLines(Paths.get(filename), StandardCharsets.UTF_8);
-		String[] pos1 = lines.get(0).split(" ");
+		String[] pos1 = lines.get(0).split(",");
 		String[] pos2 = new String[pos1.length];
 		double[][] costs = new double[pos1.length][pos2.length];
 
 		for (int i = 1; i < lines.size()-1; i++) {
-			String[] temp = lines.get(i).split(" "); 
+			String[] temp = lines.get(i).split(","); 
 			pos2[i] = temp[0];
 			for (int j = 0; j < temp.length-1; j++) {
 				costs[i-1][j] =  Double.parseDouble(temp[j+1]);

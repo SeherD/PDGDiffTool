@@ -1,0 +1,82 @@
+Calculating graph edit distance for the two files:
+test1
+test3
+Distance between the two files: 4.215610859728507. Normalised: 0.22187425577518458
+Edit path:
+Node [id=Line_5, sourceCode=public static void main(String[] args) {
+		int x = 1;
+		while (x < 10) {
+			if (x == 1) {
+				System.out.println("one");
+			}
+			if (x == 3) {
+				System.out.println("three");
+			}
+			if (x == 5) {
+				System.out.println("five");
+			}
+			System.out.println(x);
+			if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}
+		}
+	}, semanticType=Method.Name] -> Node [id=Line_5, sourceCode=public static void main(String[] args) {
+		int x = 1;
+		while (x < 10) {
+			if (x == 1) {
+				System.out.println("one");
+			}
+			if (x == 3) {
+				System.out.println("three");
+			}
+			if (x == 5) {
+				System.out.println("five");
+			}
+			if (x == 7) {
+				System.out.println("seven");
+			}
+			System.out.println(x);
+			if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}
+		}
+	}, semanticType=Method.Name]0.11764705882352941
+Node [id=Line_6, sourceCode=int x = 1, semanticType=VariableDeclarationExpr] -> Node [id=Line_6, sourceCode=int x = 1, semanticType=VariableDeclarationExpr]0.15384615384615385
+Node [id=Line_16, sourceCode=System.out.println("five"), semanticType=MethodCallExpr] -> Node [id=Line_19, sourceCode=System.out.println("seven"), semanticType=MethodCallExpr]0.4
+Node [id=Line_17, sourceCode=System.out.println(x), semanticType=MethodCallExpr] -> Node [id=Line_20, sourceCode=System.out.println(x), semanticType=MethodCallExpr]0.25
+Node [id=Line_18, sourceCode=if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}, semanticType=IfStmt] -> Node [id=Line_21, sourceCode=if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}, semanticType=IfStmt]0.29411764705882354
+Node [id=Line_21, sourceCode=} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}, semanticType=Other] -> Node [id=Line_24, sourceCode=} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}, semanticType=Other]0.5
+Node [id=Line_21, sourceCode=x++, semanticType=UnaryExpr] -> Node [id=Line_24, sourceCode=x++, semanticType=UnaryExpr]0.5
+ε -> Node [id=Line_16, sourceCode=System.out.println("five"), semanticType=MethodCallExpr]1.0
+ε -> Node [id=Line_17, sourceCode=if (x == 7) {
+				System.out.println("seven");
+			}, semanticType=IfStmt]1.0
+Node [id=Line_6, sourceCode=int x = 1, semanticType=VariableDeclarationExpr] -> Node [id=Line_6, sourceCode=int x = 1, semanticType=VariableDeclarationExpr] Edge Association Changed

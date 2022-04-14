@@ -93,10 +93,11 @@ public class Graph {
 	public String getSourceCode() {
 		return sourceCode;
 	}
-
-	Graph createGraph(File graphFile, Hashtable<Integer, String> sourceCode) throws FileNotFoundException {
+	
+	Graph createGraph(File graphFile, Hashtable<Integer, String> sourceCode, HashMap<String,String> semanticTypes) throws FileNotFoundException {
 		Graph graph = new Graph();
-
+		
+		System.out.println(semanticTypes);
 		Scanner scanner = new Scanner(graphFile);
 		if (scanner.hasNext()) {
 			scanner.nextLine();
@@ -108,9 +109,15 @@ public class Graph {
 			if (line.length() <= 12) {
 				String tokens[] = line.split(";");
 				if (!tokens[0].equalsIgnoreCase("}")) {
-					Node node = new Node(tokens[0].replaceAll(" ", ""), sourceCode.get(counter));
-
-					graph.addNode(node);
+					String code = sourceCode.get(counter);
+					if(code!=null) {
+						code = code.replaceAll(";$", "");
+						String type = getType(code.trim(), semanticTypes);
+						Node node = new Node(tokens[0].replaceAll(" ", ""), code.trim(), type);
+						System.out.println(node);
+						graph.addNode(node);
+					}
+					
 					counter++;
 
 				}
@@ -128,11 +135,32 @@ public class Graph {
 
 		}
 
-		System.out.println(graph.toString());
+		//System.out.println(graph.toString());
 		return graph;
 
 	}
 
+	private String getType(String code, HashMap<String, String> semanticTypes) {
+		
+		String[] codes= code.split("\n");
+		
+		for (String key : semanticTypes.keySet()) {
+			if (key.equalsIgnoreCase(codes[0]) && semanticTypes.get(key)!=null) {
+				return semanticTypes.get(key);
+			}
+			else if(key.equalsIgnoreCase("main") && codes[0].contains(key)) {
+				return semanticTypes.get(key);
+			}
+			else if(codes[0].contains("class")) {
+				return "Class.Name";
+			}
+		}
+		
+			
+		
+		return "Other";
+		
+	}
 	@Override
 	public String toString() {
 		return "Graph [nodes=" + nodes + ", edges=" + edges + "]";
@@ -145,9 +173,27 @@ public class Graph {
 		Graph graph = new Graph();
 		File graphFile = new File(".\\graphFiles\\" + filename);
 		Hashtable<Integer, String> sourceCode= p.getLineContent(filename);
-		graph = graph.createGraph(graphFile,sourceCode);
+		graph = graph.createGraph(graphFile,sourceCode,cleanDict(PDG_Generator.getSemanticTypesMap()));
 		return graph;
 
+	}
+	
+	public HashMap<String,String> cleanDict(HashMap<String,String> semanticTypes){
+		ArrayList <String > keys = new ArrayList<String>();
+		for (String key : semanticTypes.keySet()) {
+			if(semanticTypes.get(key).length()<1) {
+				keys.add(key);
+			}
+		}
+		for (String key:keys) {
+			semanticTypes.remove(key);
+		}
+		return semanticTypes;
+		
+	}
+	
+	void manualCheck(HashMap<String,String> semanticTypes) {
+		System.out.println(semanticTypes.get("int sum = 0"));
 	}
 
 }

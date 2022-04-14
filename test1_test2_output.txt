@@ -1,0 +1,5 @@
+Calculating graph edit distance for the two files:
+test1
+test2
+Distance between the two files: 0.0. Normalised: 0.0
+The given files are semantically identical.

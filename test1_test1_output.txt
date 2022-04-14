@@ -1,0 +1,5 @@
+Calculating graph edit distance for the two files:
+test1
+test1
+Distance between the two files: Infinity. Normalised: Infinity
+The given files are completely different.

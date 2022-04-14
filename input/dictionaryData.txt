@@ -1,0 +1,3036 @@
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test1
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test1
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test1
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test1
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test1
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test3
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    if (x == 7) {        System.out.println("seven");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 7) {    System.out.println("seven");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 7
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+7
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("seven")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"seven"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test1
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test3
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    if (x == 7) {        System.out.println("seven");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 7) {    System.out.println("seven");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 7
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+7
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("seven")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"seven"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test1
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test3
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    if (x == 7) {        System.out.println("seven");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 7) {    System.out.println("seven");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 7
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+7
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("seven")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"seven"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test1
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test3
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    if (x == 7) {        System.out.println("seven");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 7) {    System.out.println("seven");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 7
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+7
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("seven")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"seven"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test1
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.ImportDeclaration
+import java.lang.Math;
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang.Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.QualifiedNameExpr
+java.lang
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+java
+------------------------------------------------------------
+ClassOrInterface.Modifier
+public
+------------------------------------------------------------
+Class.Name
+test1
+------------------------------------------------------------
+Class.ExtensionOf
+[]
+------------------------------------------------------------
+Method.Modifier
+public
+------------------------------------------------------------
+Method.Modifier
+static
+------------------------------------------------------------
+Method.Type
+void
+------------------------------------------------------------
+Method.Name
+main
+------------------------------------------------------------
+class com.github.javaparser.ast.body.Parameter
+String[] args
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+args
+------------------------------------------------------------
+class com.github.javaparser.ast.type.ReferenceType
+String[]
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+int x = 1
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+int
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.WhileStmt
+while (x < 10) {    if (x == 1) {        System.out.println("one");    }    if (x == 3) {        System.out.println("three");    }    if (x == 5) {        System.out.println("five");    }    System.out.println(x);    if (x < 5) {        x = x + 2;    } else {        x++;        double rand = Math.random();        System.out.println(rand);    }}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 10
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+10
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 1) {    System.out.println("one");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+1
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("one")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"one"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 3) {    System.out.println("three");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+3
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("three")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"three"
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x == 5) {    System.out.println("five");}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x == 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println("five")
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.StringLiteralExpr
+"five"
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(x)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.stmt.IfStmt
+if (x < 5) {    x = x + 2;} else {    x++;    double rand = Math.random();    System.out.println(rand);}
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x < 5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+5
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.AssignExpr
+x = x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.BinaryExpr
+x + 2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.IntegerLiteralExpr
+2
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.UnaryExpr
+x++
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+x
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.VariableDeclarationExpr
+double rand = Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.type.PrimitiveType
+double
+------------------------------------------------------------
+class com.github.javaparser.ast.body.VariableDeclaratorId
+rand
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+Math.random()
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+Math
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.MethodCallExpr
+System.out.println(rand)
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.FieldAccessExpr
+System.out
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+System
+------------------------------------------------------------
+class com.github.javaparser.ast.expr.NameExpr
+rand

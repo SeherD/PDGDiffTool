@@ -1,0 +1,153 @@
+-------------
+Cost matrix: 
+0.00	1.50	0.67	0.90	0.88	0.50	1.00	0.50	1.00	0.50	1.00	0.50	1.00	1.00	0.80	0.90	1.00	0.67	0.67	1.00	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	
+1.50	0.00	1.67	1.90	1.88	1.50	2.00	1.50	2.00	1.50	2.00	1.50	2.00	2.00	1.80	1.90	2.00	1.67	1.67	2.00	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	
+0.67	1.67	0.00	0.82	0.78	0.67	2.00	0.67	2.00	0.67	2.00	0.67	2.00	2.00	0.67	0.82	2.00	0.50	0.50	2.00	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	
+0.89	1.89	0.80	0.12	0.47	0.89	8.00	0.89	8.00	0.89	8.00	0.89	8.00	8.00	0.67	0.53	8.00	0.80	0.80	8.00	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	
+1.86	1.86	1.75	1.60	0.15	1.66	6.50	1.66	6.50	1.66	6.50	1.51	6.50	6.80	1.40	1.10	6.70	1.75	1.15	6.00	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	
+1.50	1.50	1.67	1.90	1.18	0.00	1.40	0.90	1.40	0.90	1.40	0.90	1.40	1.40	1.20	1.30	1.50	1.67	1.47	1.30	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	
+2.00	2.00	3.00	10.00	7.30	1.60	0.00	1.60	0.70	1.60	0.70	1.60	0.70	0.60	4.60	9.70	0.50	3.00	3.00	0.30	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	
+1.50	1.50	1.67	1.90	1.28	0.80	2.00	0.00	2.00	0.90	2.00	0.90	2.00	1.40	1.20	1.90	1.40	1.67	1.37	1.40	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	
+2.00	2.00	3.00	10.00	7.30	1.60	0.70	1.60	0.00	1.60	0.70	1.60	0.70	0.60	4.60	9.70	0.50	3.00	3.00	0.30	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	
+1.50	1.50	1.67	1.90	1.28	0.80	2.00	0.90	2.00	0.00	2.00	0.90	2.00	1.40	1.20	1.90	1.40	1.67	1.37	1.40	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	
+2.00	2.00	3.00	10.00	7.30	1.60	0.70	1.60	0.70	1.60	0.00	1.60	0.70	0.60	4.60	9.00	0.50	3.00	3.00	0.30	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	
+2.00	2.00	3.00	10.00	7.40	1.30	1.00	1.40	1.00	1.40	1.00	1.00	1.00	0.40	4.40	10.00	0.40	3.00	2.70	0.40	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	
+1.80	1.80	1.67	1.54	1.04	1.10	5.00	1.20	5.00	1.20	5.00	1.20	5.00	4.40	0.25	1.69	4.40	1.67	1.37	4.40	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	
+1.89	1.89	1.80	1.53	0.77	1.49	8.70	1.49	8.70	1.49	8.00	1.49	8.70	8.60	1.18	0.29	8.50	1.60	1.60	8.30	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	
+2.00	2.00	3.00	10.00	7.70	2.00	0.30	1.30	0.30	1.30	0.30	1.30	0.30	0.30	4.30	9.30	0.00	3.00	2.60	0.70	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	
+0.67	1.67	0.50	0.82	0.78	0.67	2.00	0.67	2.00	0.67	2.00	0.67	2.00	2.00	0.50	0.73	2.00	0.50	0.50	2.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	
+1.67	1.67	1.50	1.82	1.08	1.37	2.40	1.17	2.40	1.17	2.40	1.17	2.40	2.50	1.00	1.13	2.60	1.50	0.50	2.30	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	
+2.00	2.00	3.00	10.00	7.00	1.80	0.50	1.80	0.50	1.80	0.50	1.80	0.50	0.80	4.80	9.50	0.70	3.00	2.40	0.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	
+1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	inf	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	inf	1.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	0.00	
+Calculating graph edit distance for the two files:
+test1
+test3
+Distance between the two files: 4.215610859728507. Normalised: 0.22187425577518458
+Edit path:
+(Line_5
+public static void main(String[] args) {
+		int x = 1;
+		while (x < 10) {
+			if (x == 1) {
+				System.out.println("one");
+			}
+			if (x == 3) {
+				System.out.println("three");
+			}
+			if (x == 5) {
+				System.out.println("five");
+			}
+			System.out.println(x);
+			if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}
+		}
+	}
+Other -> Line_5
+public static void main(String[] args) {
+		int x = 1;
+		while (x < 10) {
+			if (x == 1) {
+				System.out.println("one");
+			}
+			if (x == 3) {
+				System.out.println("three");
+			}
+			if (x == 5) {
+				System.out.println("five");
+			}
+			if (x == 7) {
+				System.out.println("seven");
+			}
+			System.out.println(x);
+			if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}
+		}
+	}
+Other) = 0.11764705882352941
+(Line_6
+int x = 1
+VariableDeclarationExpr -> Line_6
+int x = 1
+VariableDeclarationExpr) = 0.15384615384615385
+(Line_16
+System.out.println("five")
+MethodCallExpr -> Line_19
+System.out.println("seven")
+MethodCallExpr) = 0.4
+(Line_17
+System.out.println(x)
+MethodCallExpr -> Line_20
+System.out.println(x)
+MethodCallExpr) = 0.25
+(Line_18
+if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}
+IfStmt -> Line_21
+if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}
+IfStmt) = 0.29411764705882354
+(Line_21
+} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}
+Other -> Line_24
+} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}
+Other) = 0.5
+(Line_21
+x++
+UnaryExpr -> Line_24
+x++
+UnaryExpr) = 0.5
+(ε -> Line_16
+System.out.println("five")
+MethodCallExpr) = 1.0
+(ε -> Line_17
+if (x == 7) {
+				System.out.println("seven");
+			}
+IfStmt) = 1.0

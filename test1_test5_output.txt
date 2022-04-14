@@ -1,0 +1,5 @@
+Calculating graph edit distance for the two files:
+test1
+test5
+Distance between the two files: 15.299999999999999. Normalised: 1.3909090909090909
+The given files are completely different.

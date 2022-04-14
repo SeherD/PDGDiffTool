@@ -17,9 +17,11 @@ digraph G {
   Line_2 -> Line_4 [ label="CD" ];
   Line_2 -> Line_5 [ label="CD" ];
   Line_5 -> Line_5 [ label="CD" ];
+  Line_4 -> Line_5 [ label="FD" ];
   Line_5 -> Line_6 [ label="CD" ];
   Line_6 -> Line_6 [ label="FD" ];
   Line_3 -> Line_6 [ label="FD" ];
+  Line_4 -> Line_6 [ label="FD" ];
   Line_5 -> Line_7 [ label="CD" ];
   Line_7 -> Line_7 [ label="FD" ];
   Line_4 -> Line_7 [ label="FD" ];
@@ -35,4 +37,6 @@ digraph G {
   Line_9 -> Line_11 [ label="CD" ];
   Line_7 -> Line_11 [ label="FD" ];
   Line_4 -> Line_11 [ label="FD" ];
+  Line_7 -> Line_5 [ label="FD" ];
+  Line_7 -> Line_6 [ label="FD" ];
 }

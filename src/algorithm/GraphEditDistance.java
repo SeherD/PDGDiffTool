@@ -112,8 +112,10 @@ public class GraphEditDistance {
 		return Double.MAX_VALUE;
 	}
 
-	public double getSubstituteCost(Node node1, Node node2) {
+	public double getSubstituteCost(Node node1, Node node2) { 
+		
 		double diff = (getRelabelCost(node1, node2) + getEdgeDiff(node1, node2)) / 2;
+			
 		return diff * SUBSTITUTE_COST;
 	}
 
@@ -122,18 +124,21 @@ public class GraphEditDistance {
 		if(!node1.equals(node2)) {
 			diff = getPosWeight(node1, node2);
 		}
+		else {
+			
+		}
 
 		return diff ;
 	}
+	
+	
 
 	public double getPosWeight(Node node) {
-		return 1.0;
-		//return getPosWeight(node.getAttributes().get(0));
+		return getPosWeight(node.getSemanticType());
 	}
 
 	public double getPosWeight(Node node1, Node node2) {
-		return 1.0;
-		//return getPosWeight(node1.getAttributes().get(0)+","+node2.getAttributes().get(0));
+		return getPosWeight(node1.getSemanticType()+","+node2.getSemanticType());
 	}
 
 	public double getPosWeight(String key) {
@@ -145,9 +150,11 @@ public class GraphEditDistance {
 	}
 
 	public double getEdgeDiff(Node node1, Node node2) {
+		
 		List<Edge> edges1 = g1.getEdges(node1);
 		List<Edge> edges2 = g2.getEdges(node2);
 		if(edges1.size() == 0 || edges2.size() == 0) {
+			
 			return getWeightSum(edges1) + getWeightSum(edges2);
 		}
 
@@ -171,7 +178,9 @@ public class GraphEditDistance {
 				edgeCostMatrix[j][i+m] = getEdgeDeleteCost(i, j, edges1.get(i));
 			}
 		}
-
+		
+	
+		
 		int[][] assignment = HungarianAlgorithm.hgAlgorithm(edgeCostMatrix, "min");
 		double sum = 0; 
 		for (int i=0; i<assignment.length; i++){
@@ -182,11 +191,7 @@ public class GraphEditDistance {
 	}
 
 	public double getDeprelWeight(Edge edge) {
-		Double weight = deprelEditWeights.get(edge.getLabel());
-		if(weight == null) {
-			return 1;
-		}
-		return weight;
+		return 1;
 	}
 
 	public double getWeightSum(List<Edge> edges) {
