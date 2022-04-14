@@ -33,7 +33,7 @@ public class Node {
 		return sourceCode;
 	}
 
-	
+	//returns numbers in the string
 	private String getNumber(String code) {
 		 return code.replaceAll("[^0-9]", "");
 	}
@@ -43,12 +43,18 @@ public class Node {
 	public String toString() {
 		return "Node ID =" + id + ",Source Code =" + sourceCode + ",Syntactic Type =" + semanticType ;
 	}
-	
+	//gets first line of code blocks
 	String getFirstLine(String code){
 		String[] newCode = code.split("\n");
 		
 		return newCode[0];
 	}
+	
+	
+	//Is used as the basis for determining if two nodes are equal
+	// first it checks for syntactic types 
+	//if those are equal it checks whether the source code has any numerical literals which are compared against each other
+	//finally if there are any string literals in the sourcecode, those are compared against each other also.
 	@Override
 	public  boolean equals(Object obj) {
 		if(getClass() == obj.getClass()) {
@@ -84,7 +90,7 @@ public class Node {
 		}
 		return false;
 	}
-
+//gets quoted text
 	String getLiteral(String code) {
 		String literal = "";
 		Pattern p = Pattern.compile("\"([^\"]*)\"");

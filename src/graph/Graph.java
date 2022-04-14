@@ -94,6 +94,10 @@ public class Graph {
 		return sourceCode;
 	}
 	
+	// This method is used to populate the graph via PDG, SourceCode and AST Type
+	// It reads the nodes and edges from the PDG
+	// Each node gets sourceCode and Syntactic Type attached to it
+	// Edges go from node to node.
 	Graph createGraph(File graphFile, Hashtable<Integer, String> sourceCode, HashMap<String,String> semanticTypes) throws FileNotFoundException {
 		Graph graph = new Graph();
 		
@@ -138,7 +142,7 @@ public class Graph {
 		return graph;
 
 	}
-
+ // This method is used to retrieve the Syntactic Type from the AST Map depending on its sourceCode
 	private String getType(String code, HashMap<String, String> semanticTypes) {
 		
 		String[] codes= code.split("\n");
@@ -166,17 +170,21 @@ public class Graph {
 	}
 
 	public Graph generateGraph(String file) throws FileNotFoundException {
+		// Line parser is used to acquire sourceCode from the test files that corresponds to each line
 		String filename = file;
 		lineParse p = new lineParse();
+		// PDG generator is called to generate the PDG for the given test file
 		PDG_Generator.getDotFile(".\\input\\" + filename + ".java");
 		Graph graph = new Graph();
 		File graphFile = new File(".\\graphFiles\\" + filename);
 		Hashtable<Integer, String> sourceCode= p.getLineContent(filename);
+		//The adjacency list graph is populated from the PDG, the sourceCode and the AST map 
 		graph = graph.createGraph(graphFile,sourceCode,cleanDict(PDG_Generator.getSemanticTypesMap()));
 		return graph;
 
 	}
 	
+	// This method removes all the null entries in the AST map
 	public HashMap<String,String> cleanDict(HashMap<String,String> semanticTypes){
 		ArrayList <String > keys = new ArrayList<String>();
 		for (String key : semanticTypes.keySet()) {

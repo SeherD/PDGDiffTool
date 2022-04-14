@@ -1,0 +1,176 @@
+Calculating graph edit distance for the two files:
+test1
+test4
+Distance between the two files: 9.330681818181818. Normalised: 0.5183712121212121
+Edit path:
+Node 
+Node ID =Line_5 -> Node ID =Line_5
+Source Code =public static void main(String[] args) {
+		int x = 1;
+		while (x < 10) {
+			if (x == 1) {
+				System.out.println("one");
+			}
+			if (x == 3) {
+				System.out.println("three");
+			}
+			if (x == 5) {
+				System.out.println("five");
+			}
+			System.out.println(x);
+			if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}
+		}
+	} -> Source Code =public static void main(String[] args) {
+		int x = 1;
+		for (int i = 0; i < 7; i++) {
+			if (x == 1) {
+				System.out.println("one");
+			}
+			if (x == 3) {
+				System.out.println("three");
+			}
+			if (x == 5) {
+				System.out.println("five");
+			}
+			System.out.println(x);
+			if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+				
+			}
+		}
+	}
+Syntactic Type =Method.Name -> Syntactic Type =Method.Name
+Cost= 0.4666666666666667
+
+Node 
+Node ID =Line_6 -> Node ID =Line_6
+Source Code =int x = 1 -> Source Code =int x = 1
+Syntactic Type =VariableDeclarationExpr -> Syntactic Type =VariableDeclarationExpr
+Cost= 0.4375
+
+Node 
+Node ID =Line_7 -> Node ID =Line_6
+Source Code =while (x < 10) {
+			if (x == 1) {
+				System.out.println("one");
+			}
+			if (x == 3) {
+				System.out.println("three");
+			}
+			if (x == 5) {
+				System.out.println("five");
+			}
+			System.out.println(x);
+			if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			}
+		} -> Source Code =if (x == 1) {
+				System.out.println("one");
+			}
+Syntactic Type =WhileStmt -> Syntactic Type =IfStmt
+Cost= 1.2181818181818183
+
+Node 
+Node ID =Line_8 -> Node ID =Line_14
+Source Code =if (x == 1) {
+				System.out.println("one");
+			} -> Source Code =System.out.println(x)
+Syntactic Type =IfStmt -> Syntactic Type =MethodCallExpr
+Cost= 0.6
+
+Node 
+Node ID =Line_10 -> Node ID =Line_7
+Source Code =System.out.println("one") -> Source Code =System.out.println("one")
+Syntactic Type =MethodCallExpr -> Syntactic Type =MethodCallExpr
+Cost= 0.5
+
+Node 
+Node ID =Line_13 -> Node ID =Line_10
+Source Code =System.out.println("three") -> Source Code =System.out.println("three")
+Syntactic Type =MethodCallExpr -> Syntactic Type =MethodCallExpr
+Cost= 0.5
+
+Node 
+Node ID =Line_16 -> Node ID =Line_13
+Source Code =System.out.println("five") -> Source Code =System.out.println("five")
+Syntactic Type =MethodCallExpr -> Syntactic Type =MethodCallExpr
+Cost= 1.0
+
+Node 
+Node ID =Line_17 -> Node ID =Line_17
+Source Code =System.out.println(x) -> Source Code =x = x + 2
+Syntactic Type =MethodCallExpr -> Syntactic Type =AssignExpr
+Cost= 0.775
+
+Node 
+Node ID =Line_18 -> Node ID =Line_18
+Source Code =if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			} -> Source Code =} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+				
+			}
+Syntactic Type =IfStmt -> Syntactic Type =Other
+Cost= 1.3333333333333333
+
+Node 
+Node ID =Line_20 -> Node ID =Line_16
+Source Code =x = x + 2 -> Source Code =if (x < 5) {
+				x = x + 2;
+			} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+				
+			}
+Syntactic Type =AssignExpr -> Syntactic Type =IfStmt
+Cost= 0.3
+
+Node 
+Node ID =Line_21 -> Node ID =Line_21
+Source Code =} else {
+				x++;
+				double rand = Math.random();
+				System.out.println(rand);
+			} -> Source Code =System.out.println(rand)
+Syntactic Type =Other -> Syntactic Type =MethodCallExpr
+Cost= 0.25
+
+Node 
+Node ID =Line_21 -> Node ID =Line_21
+Source Code =x++ -> Source Code =double rand = Math.random()
+Syntactic Type =UnaryExpr -> Syntactic Type =VariableDeclarationExpr
+Cost= 0.55
+
+Node 
+Node ID =Line_22 -> Node ID =Line_20
+Source Code =double rand = Math.random() -> Source Code =x++
+Syntactic Type =VariableDeclarationExpr -> Syntactic Type =UnaryExpr
+Cost= 0.4
+
+Node 
+ε -> Node ID =Line_6
+ε -> Source Code =for (int i = 0; i < 7; i++) {
+ε -> Syntactic Type =ForStmt
+Cost= 1.0
+

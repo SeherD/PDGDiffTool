@@ -68,7 +68,7 @@ public class GraphEditDistance {
 
 	public double[][] createCostMatrix() {
 		/**
-		 * Creates the cost matrix used as input to Munkres algorithm. The matrix
+		 * Creates the cost matrix used as input to Munkres/Hungarian algorithm. The matrix
 		 * consists of 4 sectors: upper left, upper right, bottom left, bottom right.
 		 * Upper left represents the cost of all N x M node substitutions. Upper right
 		 * node deletions Bottom left node insertions. Bottom right represents delete ->

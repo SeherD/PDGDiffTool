@@ -22,9 +22,11 @@ public class App {
 	static PrintStream stdout = System.out;
 	static Map<Integer, String> obs = new HashMap<Integer, String>();
 
+	
+	
 	public static void main(String[] args) throws ClassNotFoundException, IOException {
 		Config cs = new Config("app.properties");
-
+		//Sets the substitution matrix for weights of node substitutions
 		Map<String, Double> posEditWeights = EditWeightService.getEditWeights(cs.getProperty("POS_SUB_WEIGHTS"),
 				cs.getProperty("POS_INSDEL_WEIGHTS"));
 		Map<String, Double> deprelEditWeights = null;
@@ -40,6 +42,8 @@ public class App {
 		System.out.println("Exiting..");
 	}
 
+	
+	//Uses the edit path to calculate the Graph edit distance and normalizes it based upon the length of the two graphs
 	public static void getDistance(String[] files, Map<String, Double> posEditWeights,
 			Map<String, Double> deprelEditWeights) throws FileNotFoundException {
 		Graph g1 = new Graph();
@@ -48,6 +52,9 @@ public class App {
 		g2 = g2.generateGraph(files[1]);
 
 		GraphEditDistance ged = new GraphEditDistance(g1, g2, posEditWeights, deprelEditWeights);
+		
+		
+		//Generates Output to txt file
 		System.setOut(new PrintStream(new FileOutputStream(files[0] + "_" + files[1] + "_" + "output.txt")));
 		// ged.printMatrix();
 
@@ -61,6 +68,8 @@ public class App {
 		editPathAnalysis(editPathFull, ged.getNormalizedDistance());
 		System.setOut(stdout);
 	}
+	
+	//Returns results based upon normalized GED
 
 	public static void editPathAnalysis(List<String> editPathFull, double normalisedDistance) {
 
@@ -81,6 +90,8 @@ public class App {
 
 	}
 
+	
+	//Gets the files to be compared for input
 	public static String[] getInputTexts(String[] args) {
 		String text1 = "", text2 = "";
 		if (args.length != 2) {
@@ -110,6 +121,7 @@ public class App {
 		return getAssignment(g1, g2, costMatrix, false, false);
 	}
 
+	//Calculates the optimal matching using the hungarian algorithm and the cost matrix
 	public static List<String> getAssignment(Graph g1, Graph g2, double[][] costMatrix, boolean editPath,
 			boolean printCost) {
 		List<String> editPaths = new ArrayList<>();
@@ -154,12 +166,13 @@ public class App {
 		return editPaths;
 
 	}
-
+//splits strings based on commas
 	static String[] formatting(String node) {
 		String[] tokens = node.split(",");
 		return tokens;
 	}
 
+	//gets either node.toString or Epsilon depending on if its an insertion or substitution
 	private static String getEditPathAttribute(int nodeNumber, Graph g) {
 		if (nodeNumber < g.getNodes().size()) {
 			Node n = g.getNode(nodeNumber);
