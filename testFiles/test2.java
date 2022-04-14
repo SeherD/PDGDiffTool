@@ -3,16 +3,12 @@ public class test2 {
     public static void main(String[] args){
         int x = 1;
         while(x < 10){
-            switch(x){
-                case 1:
-                    System.out.println("one");
-                    break;
-                case 3:
-                    System.out.println("three");
-                    break;
-                case 5:
-                    System.out.println("five");
-                    break;}               
+                if(x==1){
+                    System.out.println("one");}   
+                if(x==3){
+                    System.out.println("three");}  
+                if(x==5){
+                    System.out.println("five");}           
             System.out.println(x);
             if(x < 5){
                 x=x+2;}
