@@ -78,7 +78,7 @@ public class App {
 		} else if (normalisedDistance == 0) {
 			System.out.println("The given files are semantically identical.");
 		} else {
-
+			System.out.println("The given files are semantically similar.");
 			System.out.println("Edit path:");
 			for (String editPath : editPathFull) {
 

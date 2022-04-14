@@ -2,6 +2,7 @@ Calculating graph edit distance for the two files:
 test1
 test3
 Distance between the two files: 4.215610859728507. Normalised: 0.22187425577518458
+The given files are semantically similar.
 Edit path:
 Node 
 Node ID =Line_5 -> Node ID =Line_5
