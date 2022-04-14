@@ -6,3 +6,14 @@ In this project, we are developing a software application that can compute the m
 ## Environment Setup
 1. Eclipse IDE
 2. Java 13 SDK
+
+## Team Member
+Haotian Chen
+
+Seher Dawar
+
+Lucas Johannson
+
+Prit Patel
+
+Xiang Yu Shi
