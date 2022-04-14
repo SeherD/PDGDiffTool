@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -15,24 +16,22 @@ import graph.Graph;
 import graph.Node;
 import misc.EditWeightService;
 
-
 import com.konstantinosnedas.HungarianAlgorithm;
-
 
 public class App {
 	static PrintStream stdout = System.out;
-	static List<String> obs = new ArrayList<String>();
+	static Map<Integer, String> obs = new HashMap<Integer, String>();
+
 	public static void main(String[] args) throws ClassNotFoundException, IOException {
 		Config cs = new Config("app.properties");
-		
-		Map<String, Double> posEditWeights = EditWeightService.getEditWeights(cs.getProperty("POS_SUB_WEIGHTS"), cs.getProperty("POS_INSDEL_WEIGHTS"));
-		Map<String, Double> deprelEditWeights = EditWeightService.getInsDelCosts(cs.getProperty("DEPREL_INSDEL_WEIGHTS"));
 
-		for (String key: posEditWeights.keySet()){
-            System.out.println(key +" = "+posEditWeights.get(key));
-        }
+		Map<String, Double> posEditWeights = EditWeightService.getEditWeights(cs.getProperty("POS_SUB_WEIGHTS"),
+				cs.getProperty("POS_INSDEL_WEIGHTS"));
+		Map<String, Double> deprelEditWeights = null;
+
+		
 		boolean running = true;
-		while(running) {
+		while (running) {
 			System.out.println("\n------");
 			String[] files = getInputTexts(args);
 			getDistance(files, posEditWeights, deprelEditWeights);
@@ -40,51 +39,51 @@ public class App {
 		}
 		System.out.println("Exiting..");
 	}
-	
-	public static void getDistance(String[] files, Map<String,Double> posEditWeights, Map<String,Double> deprelEditWeights) throws FileNotFoundException  {
+
+	public static void getDistance(String[] files, Map<String, Double> posEditWeights,
+			Map<String, Double> deprelEditWeights) throws FileNotFoundException {
 		Graph g1 = new Graph();
-		g1=g1.generateGraph(files[0]);
+		g1 = g1.generateGraph(files[0]);
 		Graph g2 = new Graph();
-		g2=g2.generateGraph(files[1]);
-		
+		g2 = g2.generateGraph(files[1]);
+
 		GraphEditDistance ged = new GraphEditDistance(g1, g2, posEditWeights, deprelEditWeights);
 		System.setOut(new PrintStream(new FileOutputStream(files[0] + "_" + files[1] + "_" + "output.txt")));
-		//ged.printMatrix();
-		
+		// ged.printMatrix();
+
 		System.out.println("Calculating graph edit distance for the two files:");
 		System.out.println(files[0]);
 		System.out.println(files[1]);
-		System.out.println("Distance between the two files: "+ged.getDistance()+". Normalised: "+ged.getNormalizedDistance());
-		
-		List<String> editPathFull= getEditPath(g1, g2, ged.getCostMatrix(), true);
-		editPathAnalysis(editPathFull,ged.getNormalizedDistance());
+		System.out.println("Distance between the two files: " + ged.getDistance() + ". Normalised: "
+				+ ged.getNormalizedDistance());
+
+		List<String> editPathFull = getEditPath(g1, g2, ged.getCostMatrix(), true);
+		editPathAnalysis(editPathFull, ged.getNormalizedDistance());
 		System.setOut(stdout);
 	}
-	
-		public static void editPathAnalysis(List<String> editPathFull, double normalisedDistance) {
-			
-			if(normalisedDistance>1) {
-				System.out.println("The given files are completely different.");
-			}
-			else if(normalisedDistance==0) {
-				System.out.println("The given files are semantically identical.");
-			}
-			else {
-				System.out.println("Edit path:");
-				for(String editPath : editPathFull) {
-					System.out.println(editPath);
-				}
-				
-				for (String ob : obs) {
-					//System.out.println(ob);
-				}
-			}
-		
+
+	public static void editPathAnalysis(List<String> editPathFull, double normalisedDistance) {
+
+		if (normalisedDistance > 1) {
+			System.out.println("The given files are completely different.");
+		} else if (normalisedDistance == 0) {
+			System.out.println("The given files are semantically identical.");
+		} else {
+
+			System.out.println("Edit path:");
+			for (String editPath : editPathFull) {
+
+				System.out.println(editPath);
+
 			}
 
-	public static String[] getInputTexts(String[] args)  {
-		String text1="", text2="";
-		if(args.length!=2) {
+		}
+
+	}
+
+	public static String[] getInputTexts(String[] args) {
+		String text1 = "", text2 = "";
+		if (args.length != 2) {
 			InputStreamReader converter = new InputStreamReader(System.in);
 			BufferedReader in = new BufferedReader(converter);
 			try {
@@ -96,15 +95,13 @@ public class App {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-		}else {
+		} else {
 			return args;
 		}
 
-		return new String[] {text1, text2};
+		return new String[] { text1, text2 };
 	}
 
-	
-	
 	public static List<String> getEditPath(Graph g1, Graph g2, double[][] costMatrix, boolean printCost) {
 		return getAssignment(g1, g2, costMatrix, true, printCost);
 	}
@@ -113,7 +110,8 @@ public class App {
 		return getAssignment(g1, g2, costMatrix, false, false);
 	}
 
-	public static List<String> getAssignment(Graph g1, Graph g2, double[][] costMatrix, boolean editPath, boolean printCost) {
+	public static List<String> getAssignment(Graph g1, Graph g2, double[][] costMatrix, boolean editPath,
+			boolean printCost) {
 		List<String> editPaths = new ArrayList<>();
 		int[][] assignment = HungarianAlgorithm.hgAlgorithm(costMatrix, "min");
 
@@ -122,16 +120,34 @@ public class App {
 			String to = getEditPathAttribute(assignment[i][1], g2);
 
 			double cost = costMatrix[assignment[i][0]][assignment[i][1]];
-			if(cost != 0 && editPath) {
-				if(printCost) {
-					editPaths.add(from+" -> "+to+cost);
-					if(from.equals(to)) {
-						obs.add(from+" -> "+to + " " + "Edge Association Changed"); 
+			if (cost != 0 && editPath) {
+				if (printCost) {
+					String[] froms = formatting(from);
+					String[] tos = formatting(to);
+
+					if (from.equals(to)) {
+						obs.put(new Integer(i), "Number of edges attached to this node have changed.");
+						editPaths.add("Node \n" + froms[0] + " -> " + tos[0] + "\n" + froms[1] + " -> " + tos[1] + "\n"
+								+ froms[2] + " -> " + tos[2] + "\n" + "Cost= " + cost + "\n");
+					}
+
+					else if (from.equalsIgnoreCase("ε")) {
+
+						editPaths.add("Node \n" + from + " -> " + tos[0] + "\n" + from + " -> " + tos[1] + "\n" + from
+								+ " -> " + tos[2] + "\n" + "Cost= " + cost + "\n");
+						obs.put(i, "This node was inserted.");
+					} else if (to.equalsIgnoreCase("ε")) {
+						editPaths.add("Node \n" + froms[0] + " -> " + to + "\n" + froms[1] + " -> " + to + "\n" + froms[2]
+								+ " -> " + to + "\n" + "Cost= " + cost + "\n");
+						obs.put(i, "This node was deleted.");
+					} else {
+						editPaths.add("Node \n" + froms[0] + " -> " + tos[0] + "\n" + froms[1] + " -> " + tos[1] + "\n"
+								+ froms[2] + " -> " + tos[2] + "\n" + "Cost= " + cost + "\n");
 					}
 				}
-			}else if(cost == 0 && !editPath) {
-				editPaths.add(from+" -> "+to);
-				
+			} else if (cost == 0 && !editPath) {
+				editPaths.add(from + " -> " + to);
+
 			}
 		}
 
@@ -139,15 +155,21 @@ public class App {
 
 	}
 
+	static String[] formatting(String node) {
+		String[] tokens = node.split(",");
+		return tokens;
+	}
+
 	private static String getEditPathAttribute(int nodeNumber, Graph g) {
-		if(nodeNumber < g.getNodes().size()) {
-			Node n= g.getNode(nodeNumber);
+		if (nodeNumber < g.getNodes().size()) {
+			Node n = g.getNode(nodeNumber);
 			return n.toString();
-		}else {
+		} else {
+
 			return "ε";
 		}
 	}
-	
+
 	public static boolean shouldContinue() {
 		InputStreamReader converter = new InputStreamReader(System.in);
 		BufferedReader in = new BufferedReader(converter);

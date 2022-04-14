@@ -64,7 +64,7 @@ public class PDG_Generator {
 
 		try {
 			String content = (new Scanner(selectedFile)).useDelimiter("\\Z").next();
-			System.out.println("content: "+content);
+			
 			consoleText.setText(content);
 		} catch (FileNotFoundException | NullPointerException var6) {
 			var6.printStackTrace();
@@ -108,11 +108,11 @@ public class PDG_Generator {
 			File file = new File("./input/dictionaryData.txt"); 
 			
 			//Code segments are checked for to compute their semantic types
-			System.out.println("\n\nAST Printer starts \n\n");
+		
 			getAST(new FileInputStream(selectedFile));
 			
 			//Dictionary (Hashmap called semanticTypesMap is created where code segments are keys and semantic types are values
-			System.out.println("\n\n\n Dictionary function Start \n\n\n");
+			
 			
 			try (BufferedReader br = new BufferedReader(new InputStreamReader(
 				//Raw code segments and their semantic types are stored in a file
@@ -175,9 +175,7 @@ public class PDG_Generator {
 			}
 			
 			//Dictionary population ends
-			System.out.println("\n\n\n Dictionary function End \n\n\n");
 			
-			System.out.println("\nAST Printer ends\n\n");
 			
 			astPrinter.addFile(new FileInputStream(selectedFile),
 					(DirectedGraph<GraphNode, RelationshipEdge>) hrefGraph, gn, consoleText);

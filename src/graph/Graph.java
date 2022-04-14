@@ -97,7 +97,7 @@ public class Graph {
 	Graph createGraph(File graphFile, Hashtable<Integer, String> sourceCode, HashMap<String,String> semanticTypes) throws FileNotFoundException {
 		Graph graph = new Graph();
 		
-		System.out.println(semanticTypes);
+		
 		Scanner scanner = new Scanner(graphFile);
 		if (scanner.hasNext()) {
 			scanner.nextLine();
@@ -114,7 +114,7 @@ public class Graph {
 						code = code.replaceAll(";$", "");
 						String type = getType(code.trim(), semanticTypes);
 						Node node = new Node(tokens[0].replaceAll(" ", ""), code.trim(), type);
-						System.out.println(node);
+						
 						graph.addNode(node);
 					}
 					
@@ -135,7 +135,6 @@ public class Graph {
 
 		}
 
-		//System.out.println(graph.toString());
 		return graph;
 
 	}
@@ -192,8 +191,6 @@ public class Graph {
 		
 	}
 	
-	void manualCheck(HashMap<String,String> semanticTypes) {
-		System.out.println(semanticTypes.get("int sum = 0"));
-	}
+	
 
 }

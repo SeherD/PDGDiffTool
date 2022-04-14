@@ -3,7 +3,9 @@ test1
 test3
 Distance between the two files: 4.215610859728507. Normalised: 0.22187425577518458
 Edit path:
-Node [id=Line_5, sourceCode=public static void main(String[] args) {
+Node 
+Node ID =Line_5 ->Node ID =Line_5
+Source Code =public static void main(String[] args) {
 		int x = 1;
 		while (x < 10) {
 			if (x == 1) {
@@ -24,7 +26,7 @@ Node [id=Line_5, sourceCode=public static void main(String[] args) {
 				System.out.println(rand);
 			}
 		}
-	}, semanticType=Method.Name] -> Node [id=Line_5, sourceCode=public static void main(String[] args) {
+	} ->Source Code =public static void main(String[] args) {
 		int x = 1;
 		while (x < 10) {
 			if (x == 1) {
@@ -48,35 +50,77 @@ Node [id=Line_5, sourceCode=public static void main(String[] args) {
 				System.out.println(rand);
 			}
 		}
-	}, semanticType=Method.Name]0.11764705882352941
-Node [id=Line_6, sourceCode=int x = 1, semanticType=VariableDeclarationExpr] -> Node [id=Line_6, sourceCode=int x = 1, semanticType=VariableDeclarationExpr]0.15384615384615385
-Node [id=Line_16, sourceCode=System.out.println("five"), semanticType=MethodCallExpr] -> Node [id=Line_19, sourceCode=System.out.println("seven"), semanticType=MethodCallExpr]0.4
-Node [id=Line_17, sourceCode=System.out.println(x), semanticType=MethodCallExpr] -> Node [id=Line_20, sourceCode=System.out.println(x), semanticType=MethodCallExpr]0.25
-Node [id=Line_18, sourceCode=if (x < 5) {
+	}
+Syntactic Typ e=Method.Name ->Syntactic Typ e=Method.Name
+Cost= 0.11764705882352941
+
+Node 
+Node ID =Line_6 ->Node ID =Line_6
+Source Code =int x = 1 ->Source Code =int x = 1
+Syntactic Typ e=VariableDeclarationExpr ->Syntactic Typ e=VariableDeclarationExpr
+Cost= 0.15384615384615385
+
+Node 
+Node ID =Line_16 ->Node ID =Line_19
+Source Code =System.out.println("five") ->Source Code =System.out.println("seven")
+Syntactic Typ e=MethodCallExpr ->Syntactic Typ e=MethodCallExpr
+Cost= 0.4
+
+Node 
+Node ID =Line_17 ->Node ID =Line_20
+Source Code =System.out.println(x) ->Source Code =System.out.println(x)
+Syntactic Typ e=MethodCallExpr ->Syntactic Typ e=MethodCallExpr
+Cost= 0.25
+
+Node 
+Node ID =Line_18 ->Node ID =Line_21
+Source Code =if (x < 5) {
 				x = x + 2;
 			} else {
 				x++;
 				double rand = Math.random();
 				System.out.println(rand);
-			}, semanticType=IfStmt] -> Node [id=Line_21, sourceCode=if (x < 5) {
+			} ->Source Code =if (x < 5) {
 				x = x + 2;
 			} else {
 				x++;
 				double rand = Math.random();
 				System.out.println(rand);
-			}, semanticType=IfStmt]0.29411764705882354
-Node [id=Line_21, sourceCode=} else {
+			}
+Syntactic Typ e=IfStmt ->Syntactic Typ e=IfStmt
+Cost= 0.29411764705882354
+
+Node 
+Node ID =Line_21 ->Node ID =Line_24
+Source Code =} else {
 				x++;
 				double rand = Math.random();
 				System.out.println(rand);
-			}, semanticType=Other] -> Node [id=Line_24, sourceCode=} else {
+			} ->Source Code =} else {
 				x++;
 				double rand = Math.random();
 				System.out.println(rand);
-			}, semanticType=Other]0.5
-Node [id=Line_21, sourceCode=x++, semanticType=UnaryExpr] -> Node [id=Line_24, sourceCode=x++, semanticType=UnaryExpr]0.5
-ε -> Node [id=Line_16, sourceCode=System.out.println("five"), semanticType=MethodCallExpr]1.0
-ε -> Node [id=Line_17, sourceCode=if (x == 7) {
+			}
+Syntactic Typ e=Other ->Syntactic Typ e=Other
+Cost= 0.5
+
+Node 
+Node ID =Line_21 ->Node ID =Line_24
+Source Code =x++ ->Source Code =x++
+Syntactic Typ e=UnaryExpr ->Syntactic Typ e=UnaryExpr
+Cost= 0.5
+
+Node 
+ε ->Node ID =Line_16
+ε ->Source Code =System.out.println("five")
+ε ->Syntactic Typ e=MethodCallExpr
+Cost= 1.0
+
+Node 
+ε ->Node ID =Line_17
+ε ->Source Code =if (x == 7) {
 				System.out.println("seven");
-			}, semanticType=IfStmt]1.0
-Node [id=Line_6, sourceCode=int x = 1, semanticType=VariableDeclarationExpr] -> Node [id=Line_6, sourceCode=int x = 1, semanticType=VariableDeclarationExpr] Edge Association Changed
+			}
+ε ->Syntactic Typ e=IfStmt
+Cost= 1.0
+

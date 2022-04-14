@@ -41,7 +41,7 @@ public class Node {
 
 	@Override
 	public String toString() {
-		return "Node [id=" + id + ", sourceCode=" + sourceCode + ", semanticType=" + semanticType + "]";
+		return "Node ID =" + id + ",Source Code =" + sourceCode + ",Syntactic Type =" + semanticType ;
 	}
 	
 	String getFirstLine(String code){

@@ -78,9 +78,7 @@ public class lineParse {
 	        p.recursiveLineFinder(fileAll);
 	        reader.close();
 	        //print out contents of dictionary
-	        for (int i = 0; i < p.lineContent.size(); i++) {
-	          System.out.println("Line " + i + ": \n" + p.lineContent.get(i));
-	        }
+	        
 	        return p.lineContent;
 	      }
 	      catch (IOException e) {

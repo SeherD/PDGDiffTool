@@ -15,7 +15,7 @@ public class EditWeightService {
 		
 		try {
 			getSubCosts(subWeightFile, editCostWeights);
-			getInsDelCosts(insdelWeightFile, editCostWeights);
+			//getInsDelCosts(insdelWeightFile, editCostWeights);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
