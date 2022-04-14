@@ -12,6 +12,14 @@ The test files included in our PDG diff tool are created to test the ability to 
 
 
 ## Output
+The output of the project is piped to text files with the name format “file1 + file2 + output.txt”.
+The Normalized Graph Edit Distance (GED) is used to classify the files into Semantically Identical, Semantically Similar and Semantically Different. If the Normalized GED is 0 then the files are identical, if it's between 0 and 1, then the files are similar and if it's greater than 1 then they are different.
+The output for Semantically Similar files can be interpreted using the following guidelines :
+1. If the output is ε -> Node, then a node was added to the graph, which means the code represented by the node was inserted into the graph.
+2. If the output is Node ->ε, then a node was deleted from the graph, which means the code represented by the node was deleted from the graph.
+3. If a Node is replaced by a Node that has the same ID, Source Code and Syntactic Type, then the edges associated with that node were changed. 
+4. If a Node is replaced by a Node that looks the same but the ID is different, that means the node was moved in the graph.
+5. If the Node is replaced by an entirely different node, then that is the closest match possible to the node that was replaced. 
 
 
 ## Team Member
