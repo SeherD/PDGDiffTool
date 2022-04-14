@@ -9,6 +9,7 @@ In this project, we are developing a software application that can compute the m
 
 ## Input
 The test files included in our PDG diff tool are created to test the ability to distinguish files with minor change, major change, no change or completely different. The PDG generator we used for our diff tool does not recognise switch clauses in Java properly, so the test files we carefully created does not contain any. Also, any empty line or line only containing curly brackets only will cause disruption for the line number in the PDG generator, so we create those test files to make sure we can test our diff tool without triggering these bugs.
+There are five test files created to test in total. test1 and test2 are identical, to test the ability recognising identical files. Test3 contains minor change(an additional if statement to check value for x and print when x==7). Test4 contains major change, where the for loop is replaced with a while loop, and an additional variable is added as the loop counter. Test5 is designed to be totally different, to test the ability to recongnise completly unrelated code.
 
 
 ## Output
