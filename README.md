@@ -12,7 +12,7 @@ The test files included in our PDG diff tool are created to test the ability to 
 
 ## Screen Shots
 
-!["Exemplar active page"] (https://github.com/SeherD/PDGDiffTool/blob/main/src/resources/Screen%20Shot%202022-04-14%20at%201.21.16%20PM.png)
+!["PDG tool"] (https://github.com/SeherD/PDGDiffTool/blob/main/src/resources/Screen%20Shot%202022-04-14%20at%201.21.16%20PM.png?raw=true)
 
 ## Output
 
