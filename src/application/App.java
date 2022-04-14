@@ -70,7 +70,6 @@ public class App {
 	}
 	
 	//Returns results based upon normalized GED
-
 	public static void editPathAnalysis(List<String> editPathFull, double normalisedDistance) {
 
 		if (normalisedDistance > 1) {
@@ -169,7 +168,7 @@ public class App {
 		return editPaths;
 
 	}
-//splits strings based on commas
+	//splits strings based on commas
 	static String[] formatting(String node) {
 		String[] tokens = node.split(",");
 		return tokens;
