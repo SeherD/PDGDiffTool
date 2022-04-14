@@ -26,24 +26,27 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class PDG_Generator {
-
+	
+	// Declare variables of nencessary componets of GUI PDG application
 	private static Graph<GraphNode, RelationshipEdge> hrefGraph;
 	private static PDGCore astPrinter = new PDGCore();
 	private static JTextArea consoleText;
 	static HashMap<String, String> semanticTypesMap = new HashMap<String, String>();
 	File file = new File("./input/dictionaryData.txt");
 	
+	// Getter for SemanticTypes
 	public static HashMap<String, String> getSemanticTypesMap() {
 		return semanticTypesMap;
 	}
 	
+	// Setter for SemanticTypes
 	public static void setSemanticTypesMap(HashMap<String, String> map)
     {
       semanticTypesMap = map;
     }
 	
 	
-	
+	// Initialize AST Printer with use of Javaparser library to print all semantic types
 	public static void getAST(FileInputStream inArg) throws ParseException, IOException {
 		CompilationUnit cu;
 		cu= JavaParser.parse(inArg);
@@ -53,7 +56,7 @@ public class PDG_Generator {
 		
 	}
 	
-	
+	// Running headless GUI application of PDG to generate DOT file
 	public static void getDotFile(String filename) {
 
 		File selectedFile = new File(filename);
@@ -66,7 +69,8 @@ public class PDG_Generator {
 		} catch (FileNotFoundException | NullPointerException var6) {
 			var6.printStackTrace();
 		}
-
+		
+		// Make PDG graph given Java files
 		runAnalysisAndMakeGraph(selectedFile);
 
 		try {
@@ -75,6 +79,7 @@ public class PDG_Generator {
 			String outputFilename = selectedFile.getName().substring(0, selectedFile.getName().length() - 4);  
 			FileOutputStream out = new FileOutputStream("graphFiles/" + outputFilename);
 			
+			// Export dot files
 			DOTExporter<GraphNode, RelationshipEdge> exporter = new DOTExporter(new StringNameProvider(),
 					(VertexNameProvider) null, new StringEdgeNameProvider());
 			exporter.export(new OutputStreamWriter(out), hrefGraph);
@@ -85,12 +90,14 @@ public class PDG_Generator {
 
 		GraphNode.exporting = false;
 	}
-
+	
+	// Check if the output folder exists
 	private static boolean checkIfFolderExists() {
 		File theDir = new File("dotOutputs");
 		return !theDir.exists() && theDir.mkdir();
 	}
-
+	
+	// Create graph and initialize the dictionary for semantic types
 	private static void runAnalysisAndMakeGraph(File selectedFile) {
 		createGraph();
 		GraphNode gn = new GraphNode(0, "Entry");
@@ -179,7 +186,8 @@ public class PDG_Generator {
 			var2.printStackTrace();
 		}
 	}
-
+	
+	// Create graph with relationEdge
 	private static void createGraph() {
 		hrefGraph = new DefaultDirectedGraph(RelationshipEdge.class);
 	}
